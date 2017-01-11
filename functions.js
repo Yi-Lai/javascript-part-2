@@ -57,3 +57,42 @@ var root = number.map(function(x){
 });
 
 console.log(root);
+
+//In a previous workshop, you had to create a function that took two numbers and an operation (add, sub, mult, …) and returned the result of the operation on the two numbers. 
+function operationMaker (str){
+    switch (str){
+    case 'add':
+        return function(x , y){
+        return x + y 
+        };
+    break; 
+    case 'subtract':
+        return function(x , y){
+         return x - y 
+        };
+    break;
+    case 'mult':
+        return function(x , y){
+        return x * y     
+        };
+    break; 
+    case 'div':
+        return function (x , y){
+        return   x / y 
+        };
+    break;
+    default : "The code doesn't work"; 
+}}
+  var adder = operationMaker('add');
+  var sum = adder(2,6); 
+  var subtract = operationMaker('subtract');
+  var difference = subtract(3,10);
+  var mult = operationMaker('mult');
+  var mutiply = mult(2,7);
+  var divide = operationMaker('div');
+  var division = divide (3,5)
+
+console.log(sum);
+console.log(difference);
+console.log(mutiply);
+console.log(division);
