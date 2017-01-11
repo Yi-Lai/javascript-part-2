@@ -43,3 +43,17 @@ var roots = numbers.map(function(x){
    return x * x;
 });
 console.log(roots);
+
+//Create a function that can be used with Array.prototype.map. This function should be able to take an object and square its “num” property. Then, use this function with map on an array of objects each containing a “num” property.
+var number = [
+    {num : 12 },
+    {num : 34 },
+    {num : 23 },
+    {num : 67}
+    ]
+var root = number.map(function(x){
+    x.num = x.num * x.num ;
+    return x; 
+});
+
+console.log(root);
