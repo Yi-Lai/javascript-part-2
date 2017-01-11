@@ -36,3 +36,10 @@ var Longemails = objects.sort(function(a, b) {
     return 0;
 })
 console.log(Longemails);
+
+//Create a function that can be used with Array.prototype.map. This function should take a number and return its square. Then, use this function with map on an array of numbers to check the result.
+var numbers = [2, 4, 6, 8];
+var roots = numbers.map(function(x){
+   return x * x;
+});
+console.log(roots);
